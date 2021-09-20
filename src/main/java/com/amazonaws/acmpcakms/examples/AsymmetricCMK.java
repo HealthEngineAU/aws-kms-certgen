@@ -37,7 +37,7 @@ public class AsymmetricCMK {
         }
 
         this.client = AWSKMSClientBuilder.standard()
-                .withRegion(Regions.US_EAST_1)
+                .withRegion(Regions.AP_SOUTHEAST_2)
                 .build();
         this.alias = alias;
 

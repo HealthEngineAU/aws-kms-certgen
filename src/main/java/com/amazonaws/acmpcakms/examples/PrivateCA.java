@@ -37,7 +37,7 @@ public class PrivateCA {
         }
 
         this.client = AWSACMPCAClientBuilder.standard()
-                .withRegion(Regions.US_EAST_1)
+                .withRegion(Regions.AP_SOUTHEAST_2)
                 .build();
         this.commonName = commonName;
         this.type = type;

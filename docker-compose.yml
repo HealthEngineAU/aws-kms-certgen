@@ -1,0 +1,19 @@
+version: '3'
+services:
+  test:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - AWS_ACCESS_KEY_ID
+      - AWS_SECRET_ACCESS_KEY
+      - AWS_SESSION_TOKEN
+    image: aws-maven
+    stdin_open: true
+    tty: true
+    volumes:
+      - .:/app
+      - maven_repo:/root/.m2
+volumes:
+  maven_repo:
+

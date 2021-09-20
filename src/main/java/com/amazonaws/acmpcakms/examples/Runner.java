@@ -8,11 +8,11 @@ import java.security.Security;
 
 public class Runner {
 
-    private static final String ROOT_COMMON_NAME = "CodeSigningRoot";
-    private static final String SUBORDINATE_COMMON_NAME = "CodeSigningSubordinate";
-    private static final String END_ENTITY_COMMON_NAME = "CodeSigningCertificate";
-    private static final String CMK_ALIAS = "CodeSigningCMK";
-    private static final String TBS_DATA = "The data that I want signed";
+    private static final String ROOT_COMMON_NAME = "CVIP-CodeSigningRoot";
+    private static final String SUBORDINATE_COMMON_NAME = "CVIP-CodeSigningSubordinate";
+    private static final String END_ENTITY_COMMON_NAME = "CVIPCertificate";
+    private static final String CMK_ALIAS = "cvip-auth-uat";
+    private static final String TBS_DATA = "This bit doesn't really matter";
 
     static {
         Security.addProvider(new BouncyCastleProvider());
@@ -36,7 +36,7 @@ public class Runner {
 
         /* Creating a asymmetric key pair using AWS KMS */
         System.out.println();
-        System.out.println("Creating a asymmetric key pair using AWS KMS\n");
+        System.out.println("Getting or creating a asymmetric key pair using AWS KMS\n");
 
         AsymmetricCMK codeSigningCMK = AsymmetricCMK.builder()
                 .withAlias(CMK_ALIAS)
