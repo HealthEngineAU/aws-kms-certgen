@@ -10,8 +10,8 @@ public class Runner {
 
     private static final String ROOT_COMMON_NAME = "Healthengine-SelfSignedRoot";
     private static final String SUBORDINATE_COMMON_NAME = "Healthengine-Subordinate";
-    private static final String END_ENTITY_COMMON_NAME = "Healthengine-CVIP-UAT";
-    private static final String CMK_ALIAS = "cvip-auth-uat";
+    private static final String END_ENTITY_COMMON_NAME = "Healthengine-CVIP";
+    private static final String CMK_ALIAS = "cvip-auth";
     private static final String TBS_DATA = "This bit doesn't really matter";
 
     static {
