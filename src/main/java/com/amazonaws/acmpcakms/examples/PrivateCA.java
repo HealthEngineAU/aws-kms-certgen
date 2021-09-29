@@ -226,7 +226,7 @@ public class PrivateCA {
     }
 
     public GetCertificateResult issueCodeSigningCertificate(final String csr) {
-        System.out.println("Issuing code signing certificate for for arn=" + ca.getArn());
+        System.out.println("Issuing certificate for for arn=" + ca.getArn());
 
         Validity validity = new Validity()
                 .withType(ValidityPeriodType.YEARS)
@@ -252,7 +252,7 @@ public class PrivateCA {
 
         GetCertificateResult result = client.getCertificate(getCertificateRequest);
 
-        System.out.println("Generated code signing certificate:\n" + result.getCertificate());
+        System.out.println("Generated certificate:\n" + result.getCertificate());
 
         return result;
     }
